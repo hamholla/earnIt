@@ -1,10 +1,10 @@
-# Earn It 🍺
+# ChamPain 🍺
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## What is it?
 
-A simple react project that utilizes the Strava API to fetch your latest activities and calculate the number of miller high lifes you've earned.
+A simple react project that utilizes the Strava API to fetch your latest activities and calculate the number of miller high lifes (the champagne of beer) you've earned.
 
 ## Why?
 

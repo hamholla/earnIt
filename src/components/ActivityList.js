@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Activity from "./Activity";
+import ActivityModal from "./Modal";
 
 function ActivityList() {
   const [isLoading, setIsLoading] = useState(true);
   const [activities, setActivities] = useState({});
-  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [selectedActivity, setSelectedActivity] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   let clientID = process.env.REACT_APP_STRAVA_API_CLIENT_ID;
   let clientSecret = process.env.REACT_APP_STRAVA_API_KEY;
@@ -48,6 +50,11 @@ function ActivityList() {
       getSingleActivity(await accessToken, activity.id);
     };
     fetchActivityData();
+    setShowModal(!showModal);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(!showModal);
   };
 
   useEffect(() => {
@@ -80,6 +87,12 @@ function ActivityList() {
   return (
     <div className="container mx-auto flex flex-row flex-wrap justify-center">
       {renderedActivities}
+      {showModal && (
+        <ActivityModal
+          activity={selectedActivity}
+          onClose={() => handleModalClose()}
+        />
+      )}
     </div>
   );
 }

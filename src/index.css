@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+
+body {
+  background: #fef7e0;
+  height: 100vh;
+  font-family: "Graduate", sans-serif;
+}
+
+.text-red {
+  color: #982e32;
+}
+
+/* 
+#982e32
+#a09d86 */

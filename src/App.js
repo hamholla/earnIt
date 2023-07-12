@@ -1,13 +1,14 @@
 import React from "react";
-import ActivityList from "./ActivityList";
+import ActivityList from "./components/ActivityList";
 
 function App() {
   return (
-    <div>
-      <div className="container mx-auto flex flex-row flex-wrap justify-center">
-        {/* <h1 className="mb-6 text-3xl">
-          Select an activity to see how many beers youve earned!
-        </h1> */}
+    <div className="container mx-auto ">
+      <div className="flex flex-column justify-center flex-wrap align-center">
+        <h1 className="my-6 text-5xl text-red w-full text-center">ChamPain</h1>
+        <p className="">How many have you earned?</p>
+      </div>
+      <div className="flex flex-row flex-wrap justify-center">
         <ActivityList />
       </div>
     </div>
