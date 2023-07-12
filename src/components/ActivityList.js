@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Activity from "./Activity";
+import ActivityItem from "./ActivityItem";
 import ActivityModal from "./Modal";
 
 function ActivityList() {
@@ -73,7 +73,7 @@ function ActivityList() {
   } else if (activities.length > 0) {
     renderedActivities = activities.map((activity) => {
       return (
-        <Activity
+        <ActivityItem
           key={activity.id}
           activity={activity}
           handleClick={handleActivitySelect}

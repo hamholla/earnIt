@@ -6,6 +6,9 @@
 body {
   background: #fef7e0;
   height: 100vh;
+}
+
+* {
   font-family: "Graduate", sans-serif;
 }
 

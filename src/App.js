@@ -4,7 +4,7 @@ import ActivityList from "./components/ActivityList";
 function App() {
   return (
     <div className="container mx-auto ">
-      <div className="flex flex-column justify-center flex-wrap align-center">
+      <div className="flex mb-6 flex-column justify-center flex-wrap align-center">
         <h1 className="my-6 text-5xl text-red w-full text-center">ChamPain</h1>
         <p className="">How many have you earned?</p>
       </div>

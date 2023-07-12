@@ -7,13 +7,15 @@ export default function ActivityModal({ activity, onClose }) {
             <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-3xl font-semibold">{activity.name}</h3>
             </div>
-            <div className="relative p-6 flex-auto">
+            <div className="relative p-6 flex-auto text-center">
               <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                Calories spent: {activity.calories}
+                Calories spent:
               </p>
+              <p className="text-lg">{activity.calories}</p>
               <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                High Lifes earned: {(activity.calories / 141).toFixed(1)}
+                High Lifes earned:
               </p>
+              <p className="text-lg">{(activity.calories / 141).toFixed(1)}</p>
             </div>
             <div className="flex items-center justify-center p-6 border-t border-solid border-slate-200 rounded-b">
               <button
