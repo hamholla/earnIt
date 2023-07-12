@@ -5,6 +5,7 @@ function ActivityList() {
   // State
   const [isLoading, setIsLoading] = useState(true);
   const [activities, setActivities] = useState({});
+  const [selectedActivity, setSelectedActivity] = useState(null);
   //Strava Credentials
   let clientID = process.env.REACT_APP_STRAVA_API_CLIENT_ID;
   let clientSecret = process.env.REACT_APP_STRAVA_API_KEY;
@@ -43,13 +44,14 @@ function ActivityList() {
     const callActivity = `https://www.strava.com/api/v3/activities/${id}?access_token=`;
     fetch(callActivity + access)
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => setSelectedActivity(data))
       .catch((e) => console.log(e));
   };
 
   const handleActivitySelect = (activity) => {
-    console.log(activity);
-    getSingleActivity("3afb1cd6e9099d1d198b1f515f35744175d48f20", activity.id);
+    console.log(selectedActivity);
+    getSingleActivity(refreshToken, activity.id);
+    console.log(selectedActivity);
   };
 
   let renderedActivities = [];
